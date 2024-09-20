@@ -1,0 +1,215 @@
+/* General styling */
+@import url('https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap'); /* For Allan font */
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glitch effect styling */
+@keyframes glitch {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-5px, -3px);
+  }
+  40% {
+    transform: translate(5px, 3px);
+  }
+  60% {
+    transform: translate(-3px, 2px);
+  }
+  80% {
+    transform: translate(3px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glitch-lines {
+  0%, 100% {
+    clip-path: polygon(0 0, 100% 0, 100% 2%, 0 2%);
+  }
+  10% {
+    clip-path: polygon(0 8%, 100% 8%, 100% 10%, 0 10%);
+    background-color: rgba(255, 0, 0, 0.3); /* Red */
+  }
+  20% {
+    clip-path: polygon(0 16%, 100% 16%, 100% 18%, 0 18%);
+    background-color: rgba(0, 255, 0, 0.3); /* Green */
+  }
+  30% {
+    clip-path: polygon(0 24%, 100% 24%, 100% 26%, 0 26%);
+    background-color: rgba(0, 0, 255, 0.3); /* Blue */
+  }
+  40% {
+    clip-path: polygon(0 32%, 100% 32%, 100% 34%, 0 34%);
+    background-color: rgba(255, 255, 0, 0.3); /* Yellow */
+  }
+  50% {
+    clip-path: polygon(0 40%, 100% 40%, 100% 42%, 0 42%);
+    background-color: rgba(255, 0, 255, 0.3); /* Magenta */
+  }
+  60% {
+    clip-path: polygon(0 48%, 100% 48%, 100% 50%, 0 50%);
+    background-color: rgba(0, 255, 255, 0.3); /* Cyan */
+  }
+  70% {
+    clip-path: polygon(0 56%, 100% 56%, 100% 58%, 0 58%);
+    background-color: rgba(255, 165, 0, 0.3); /* Orange */
+  }
+  80% {
+    clip-path: polygon(0 64%, 100% 64%, 100% 66%, 0 66%);
+    background-color: rgba(128, 0, 128, 0.3); /* Purple */
+  }
+  90% {
+    clip-path: polygon(0 72%, 100% 72%, 100% 74%, 0 74%);
+    background-color: rgba(0, 255, 127, 0.3); /* Spring Green */
+  }
+}
+
+/* Background glitch lines */
+.home-container::before,
+.home-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  mix-blend-mode: difference;
+  animation: glitch-lines 1s infinite ease-in-out alternate;
+  opacity: 0.6; /* Make it slightly more visible */
+}
+
+.home-container::before {
+  animation-duration: 1s;
+  opacity: 0.5;
+}
+
+.home-container::after {
+  animation-duration: 0.75s;
+  opacity: 0.4;
+}
+
+/* Heading */
+.heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.heading-logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+.heading-text {
+  font-size: 48px;
+  font-family: 'Allan', sans-serif;
+  font-weight: bold;
+  animation: glitch 0.5s infinite;
+}
+
+/* Centered content */
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-image {
+  width: 200px; /* Adjust the size of the center image */
+  height: auto;
+  margin-bottom: 10px;
+  animation: glitch 0.5s infinite; /* Apply glitch effect to center image */
+}
+
+.center-text {
+  font-size: 24px;
+  font-family: 'Allan', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/* Corner logos */
+.corner-logo {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+
+.top-left { top: 20px; left: 20px; }
+.top-right { top: 20px; right: 20px; }
+.bottom-left { bottom: 20px; left: 20px; }
+.bottom-right { bottom: 20px; right: 20px; }
+
+/* Container for the form */
+.form-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mystery-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  font-size: 18px;
+  color: white;
+  font-family: 'Allan', sans-serif;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 300px;
+  text-align: center;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+.form-button {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Allan', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: gray;
+}
