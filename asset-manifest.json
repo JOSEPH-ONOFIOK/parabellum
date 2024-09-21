@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/pararellum/static/css/main.6df93e4e.css",
-    "main.js": "/pararellum/static/js/main.529de700.js",
-    "index.html": "/pararellum/index.html",
-    "main.6df93e4e.css.map": "/pararellum/static/css/main.6df93e4e.css.map",
-    "main.529de700.js.map": "/pararellum/static/js/main.529de700.js.map"
+    "main.css": "/parabellum/static/css/main.6df93e4e.css",
+    "main.js": "/parabellum/static/js/main.529de700.js",
+    "index.html": "/parabellum/index.html",
+    "main.6df93e4e.css.map": "/parabellum/static/css/main.6df93e4e.css.map",
+    "main.529de700.js.map": "/parabellum/static/js/main.529de700.js.map"
   },
   "entrypoints": [
     "static/css/main.6df93e4e.css",
