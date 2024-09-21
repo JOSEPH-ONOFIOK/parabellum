@@ -1,76 +1,12 @@
-/* General styling */
 @import url('https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap'); /* For Allan font */
 
+/* General container styling */
 .home-container {
   width: 100vw;
   height: 100vh;
   background-color: black;
   position: relative;
   overflow: hidden;
-}
-
-/* Glitch effect styling */
-@keyframes glitch {
-  0% {
-    transform: translate(0, 0);
-  }
-  20% {
-    transform: translate(-5px, -3px);
-  }
-  40% {
-    transform: translate(5px, 3px);
-  }
-  60% {
-    transform: translate(-3px, 2px);
-  }
-  80% {
-    transform: translate(3px, -2px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes glitch-lines {
-  0%, 100% {
-    clip-path: polygon(0 0, 100% 0, 100% 2%, 0 2%);
-  }
-  10% {
-    clip-path: polygon(0 8%, 100% 8%, 100% 10%, 0 10%);
-    background-color: rgba(255, 0, 0, 0.3); /* Red */
-  }
-  20% {
-    clip-path: polygon(0 16%, 100% 16%, 100% 18%, 0 18%);
-    background-color: rgba(0, 255, 0, 0.3); /* Green */
-  }
-  30% {
-    clip-path: polygon(0 24%, 100% 24%, 100% 26%, 0 26%);
-    background-color: rgba(0, 0, 255, 0.3); /* Blue */
-  }
-  40% {
-    clip-path: polygon(0 32%, 100% 32%, 100% 34%, 0 34%);
-    background-color: rgba(255, 255, 0, 0.3); /* Yellow */
-  }
-  50% {
-    clip-path: polygon(0 40%, 100% 40%, 100% 42%, 0 42%);
-    background-color: rgba(255, 0, 255, 0.3); /* Magenta */
-  }
-  60% {
-    clip-path: polygon(0 48%, 100% 48%, 100% 50%, 0 50%);
-    background-color: rgba(0, 255, 255, 0.3); /* Cyan */
-  }
-  70% {
-    clip-path: polygon(0 56%, 100% 56%, 100% 58%, 0 58%);
-    background-color: rgba(255, 165, 0, 0.3); /* Orange */
-  }
-  80% {
-    clip-path: polygon(0 64%, 100% 64%, 100% 66%, 0 66%);
-    background-color: rgba(128, 0, 128, 0.3); /* Purple */
-  }
-  90% {
-    clip-path: polygon(0 72%, 100% 72%, 100% 74%, 0 74%);
-    background-color: rgba(0, 255, 127, 0.3); /* Spring Green */
-  }
 }
 
 /* Background glitch lines */
@@ -85,7 +21,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   mix-blend-mode: difference;
   animation: glitch-lines 1s infinite ease-in-out alternate;
-  opacity: 0.6; /* Make it slightly more visible */
+  opacity: 0.6;
 }
 
 .home-container::before {
@@ -98,7 +34,30 @@
   opacity: 0.4;
 }
 
-/* Heading */
+/* Glitch effect styling */
+@keyframes glitch {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-5px, -3px); }
+  40% { transform: translate(5px, 3px); }
+  60% { transform: translate(-3px, 2px); }
+  80% { transform: translate(3px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes glitch-lines {
+  0%, 100% { clip-path: polygon(0 0, 100% 0, 100% 0.5%, 0 0.5%); } /* Slimmer glitch lines */
+  10% { clip-path: polygon(0 8%, 100% 8%, 100% 8.5%, 0 8.5%); background-color: rgba(255, 0, 0, 0.3); }
+  20% { clip-path: polygon(0 16%, 100% 16%, 100% 16.5%, 0 16.5%); background-color: rgba(0, 255, 0, 0.3); }
+  30% { clip-path: polygon(0 24%, 100% 24%, 100% 24.5%, 0 24.5%); background-color: rgba(0, 0, 255, 0.3); }
+  40% { clip-path: polygon(0 32%, 100% 32%, 100% 32.5%, 0 32.5%); background-color: rgba(255, 255, 0, 0.3); }
+  50% { clip-path: polygon(0 40%, 100% 40%, 100% 40.5%, 0 40.5%); background-color: rgba(255, 0, 255, 0.3); }
+  60% { clip-path: polygon(0 48%, 100% 48%, 100% 48.5%, 0 48.5%); background-color: rgba(0, 255, 255, 0.3); }
+  70% { clip-path: polygon(0 56%, 100% 56%, 100% 56.5%, 0 56.5%); background-color: rgba(255, 165, 0, 0.3); }
+  80% { clip-path: polygon(0 64%, 100% 64%, 100% 64.5%, 0 64.5%); background-color: rgba(128, 0, 128, 0.3); }
+  90% { clip-path: polygon(0 72%, 100% 72%, 100% 72.5%, 0 72.5%); background-color: rgba(0, 255, 127, 0.3); }
+}
+
+/* Heading styling */
 .heading-container {
   display: flex;
   align-items: center;
@@ -135,10 +94,10 @@
 }
 
 .center-image {
-  width: 200px; /* Adjust the size of the center image */
+  width: 200px;
   height: auto;
   margin-bottom: 10px;
-  animation: glitch 0.5s infinite; /* Apply glitch effect to center image */
+  animation: glitch 0.5s infinite;
 }
 
 .center-text {
@@ -160,56 +119,101 @@
 .bottom-left { bottom: 20px; left: 20px; }
 .bottom-right { bottom: 20px; right: 20px; }
 
-/* Container for the form */
-.form-container {
+
+
+/* Glitch Effect for Form Appearance */
+.glitch-form {
+  width: 591px;
+  height: 501px;
+  background: white;
   position: absolute;
-  bottom: 50px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  animation: glitch-form 0.7s ease-in-out both;
 }
 
-.mystery-form {
+@keyframes glitch-form {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.form-heading {
+  font-size: 32px;
+  font-family: 'Allan', sans-serif;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.form-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 20px;
 }
 
-.form-label {
-  font-size: 18px;
-  color: white;
-  font-family: 'Allan', sans-serif;
-  margin-bottom: 10px;
-}
-
-.form-input {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  width: 300px;
-  text-align: center;
-}
-
-.form-input::placeholder {
-  color: #999;
+.form-section {
+  display: flex;
+  gap: 20px;
 }
 
 .form-button {
-  background-color: white;
-  color: black;
-  font-size: 16px;
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 12px;
+  font-size: 28px;
   font-family: 'Allan', sans-serif;
-  transition: background-color 0.3s ease;
+  color: #0D70E3;
+  text-decoration: none;
+  cursor: pointer;
+  width: 150px;
 }
 
-.form-button:hover {
-  background-color: gray;
+.checkbox-plus {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.plus-sign {
+  width: 30px;
+  height: 30px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 12px;
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form-submit {
+  padding: 10px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 12px;
+  font-size: 32px;
+  font-family: 'Allan', sans-serif;
+  text-align: center;
+  cursor: pointer;
 }
