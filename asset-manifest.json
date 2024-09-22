@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/parabellum/static/css/main.f2bf24fd.css",
+    "main.css": "/parabellum/static/css/main.5dc2df2f.css",
     "main.js": "/parabellum/static/js/main.6ddd8647.js",
     "static/media/Hacklife Regular.ttf": "/parabellum/static/media/Hacklife Regular.cdd347777d4fcd42d1ce.ttf",
     "static/media/Hacklife Regular.otf": "/parabellum/static/media/Hacklife Regular.a586496b78768ead0cca.otf",
     "index.html": "/parabellum/index.html",
-    "main.f2bf24fd.css.map": "/parabellum/static/css/main.f2bf24fd.css.map",
+    "main.5dc2df2f.css.map": "/parabellum/static/css/main.5dc2df2f.css.map",
     "main.6ddd8647.js.map": "/parabellum/static/js/main.6ddd8647.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2bf24fd.css",
+    "static/css/main.5dc2df2f.css",
     "static/js/main.6ddd8647.js"
   ]
 }
