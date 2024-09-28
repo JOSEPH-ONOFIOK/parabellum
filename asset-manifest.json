@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.fa9bd06e.css",
-    "main.js": "/static/js/main.3f1a21c0.js",
+    "main.js": "/static/js/main.440eceed.js",
     "static/media/Hacklife Regular.ttf": "/static/media/Hacklife Regular.cdd347777d4fcd42d1ce.ttf",
     "static/media/Hacklife Regular.otf": "/static/media/Hacklife Regular.a586496b78768ead0cca.otf",
     "index.html": "/index.html",
     "main.fa9bd06e.css.map": "/static/css/main.fa9bd06e.css.map",
-    "main.3f1a21c0.js.map": "/static/js/main.3f1a21c0.js.map"
+    "main.440eceed.js.map": "/static/js/main.440eceed.js.map"
   },
   "entrypoints": [
     "static/css/main.fa9bd06e.css",
-    "static/js/main.3f1a21c0.js"
+    "static/js/main.440eceed.js"
   ]
 }
